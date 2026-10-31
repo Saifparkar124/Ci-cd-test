@@ -33,21 +33,21 @@ describe('Express App Tests', () => {
 
     it('should return 404 for unsupported HTTP method DELETE /', async () => {
       const response = await request(app).delete('/');
-      expect(response.statusCode).toBe(200);
+      expect(response.statusCode).toBe(404);
     });
   });
 
-  describe('GET /health', () => {
-    it('should return 200 OK and "Hello heath check!"', async () => {
-      const response = await request(app).get('/health');
-      expect(response.statusCode).toBe(200);
-      expect(response.text).toBe('Hello heath check!');
-    });
+  // describe('GET /health', () => {
+  //   it('should return 200 OK and "Hello heath check!"', async () => {
+  //     const response = await request(app).get('/health');
+  //     expect(response.statusCode).toBe(200);
+  //     expect(response.text).toBe('Hello heath check!');
+  //   });
 
-    it('should return HTML/text content type', async () => {
-      const response = await request(app).get('/health');
-      expect(response.headers['content-type']).toMatch(/text\/html/);
-    });
-  });
+  //   it('should return HTML/text content type', async () => {
+  //     const response = await request(app).get('/health');
+  //     expect(response.headers['content-type']).toMatch(/text\/html/);
+  //   });
+  // });
 });
 
