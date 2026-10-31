@@ -33,7 +33,7 @@ describe('Express App Tests', () => {
 
     it('should return 404 for unsupported HTTP method DELETE /', async () => {
       const response = await request(app).delete('/');
-      expect(response.statusCode).toBe(200);
+      expect(response.statusCode).toBe(404);
     });
   });
 
