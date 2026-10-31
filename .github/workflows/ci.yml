@@ -28,7 +28,7 @@ jobs:
 
     - name: Test
       run: |
-        jest --coverage
+        npm run test:coverage 
     
 
 
