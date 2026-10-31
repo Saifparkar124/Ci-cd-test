@@ -37,17 +37,17 @@ describe('Express App Tests', () => {
     });
   });
 
-  // describe('GET /health', () => {
-  //   it('should return 200 OK and "Hello heath check!"', async () => {
-  //     const response = await request(app).get('/health');
-  //     expect(response.statusCode).toBe(200);
-  //     expect(response.text).toBe('Hello heath check!');
-  //   });
+  describe('GET /health', () => {
+    it('should return 200 OK and "Hello heath check!"', async () => {
+      const response = await request(app).get('/health');
+      expect(response.statusCode).toBe(200);
+      expect(response.text).toBe('Hello heath check!');
+    });
 
-  //   it('should return HTML/text content type', async () => {
-  //     const response = await request(app).get('/health');
-  //     expect(response.headers['content-type']).toMatch(/text\/html/);
-  //   });
-  // });
+    it('should return HTML/text content type', async () => {
+      const response = await request(app).get('/health');
+      expect(response.headers['content-type']).toMatch(/text\/html/);
+    });
+  });
 });
 
