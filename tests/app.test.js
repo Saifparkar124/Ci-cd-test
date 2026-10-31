@@ -28,7 +28,7 @@ describe('Express App Tests', () => {
 
     it('should return 404 for unsupported HTTP method PUT /', async () => {
       const response = await request(app).put('/');
-      expect(response.statusCode).toBe(200);
+      expect(response.statusCode).toBe(404);
     });
 
     it('should return 404 for unsupported HTTP method DELETE /', async () => {
